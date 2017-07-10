@@ -7,13 +7,13 @@ import {
 } from 'react-native';
 
 class ImageContainer extends Component {
-	render () {
+	render() {
 		const {url, width, height} = this.props;
 		const {image} = styles;
 		return (
 			<Image
 				style={[{width: width, height: height}, image]}
-				source={{uri: url}}/>
+				source={url}/>
 		);
 	}
 }

@@ -6,7 +6,7 @@ import {Actions} from 'react-native-router-flux';
 import {connect} from 'react-redux';
 import {Header, Tabs, SideMenu} from './common';
 import BlogList from './BlogList';
-import CalendarContainer from './CalandarContainer';
+import CalendarContainer from './CalendarContainer';
 import {changePageTitle, appLayout} from '../actions';
 
 class MainScreen extends Component {
@@ -71,7 +71,7 @@ class MainScreen extends Component {
 			<View style={styles.container} onLayout={event => this._onLayout(event)}>
 				<Header
 					title={this.props.title}
-					leftButtonPress={() => console.log('you press button')}
+					leftButtonPress={() =>Actions.calendar()}
 					rightButtonPress={this.showSearchScreen}/>
 				{this.renderPage()}
 				{this.renderSideMenu()}
